@@ -1,6 +1,7 @@
 package com.bd.booksystem.test;
 
 import com.bd.booksystem.model.Book;
+import com.bd.booksystem.model.Student;
 import com.bd.booksystem.service.BookService;
 import com.bd.booksystem.service.Imp.BookServiceImp;
 import com.bd.booksystem.service.Imp.StudentServiceImp;
@@ -31,7 +32,7 @@ public class StudentServiceTest {
             System.out.println("登录成功!");
             while(true) {
                 System.out.println("请输入你的操作:\n1.新增图书\n2.查询可借阅图书\n3.查询已借阅图书\n" +
-                        "4.查询所有图书\n5.修改图书\n6.查询借阅人信息\n7.删除图书\n8.修改密码\n9.退出");
+                        "4.查询所有图书\n5.修改图书\n6.查询借阅人信息\n7.删除图书\n8.借阅图书\n9.归还图书\n10.退出\n请输入编号");
                 int operation = scanner.nextInt();
                 switch (operation) {
                     case 1:
@@ -70,14 +71,60 @@ public class StudentServiceTest {
                         }
                         break;
                     case 5:
+                        System.out.println("请输入要修改图书的编号:");
+                        bid = scanner.nextInt();
+                        System.out.println("图书的原始信息:");
+                        // 输出原始信息
+                        System.out.println(bookService.getBookByBid(bid));
+                        System.out.println("请输入修改后的图书名:");
+                        bname = scanner.next();
+                        System.out.println("请输入修改后的图书摘要:");
+                        category = scanner.next();
+                        // 进行修改
+                        bookService.updateBook(bname, category, bid);
+                        System.out.println("修改成功!");
                         break;
                     case 6:
+                        System.out.println("请输入图书编号:");
+                        bid = scanner.nextInt();
+                        // 查询借阅人信息
+                        Student stu = bookService.getStudentByBid(bid);
+                        System.out.println(stu);
                         break;
                     case 7:
+                        System.out.println("请输入要删除图书的编号:");
+                        bid = scanner.nextInt();
+                        if (null == bookService.getBookByBid(bid)) {
+                            System.out.println("查无此书!");
+                        } else {
+                            System.out.println("删除中...");
+                            bookService.deleteBookByBid(bid);
+                            System.out.println("已删除!");
+                        }
                         break;
                     case 8:
+                        System.out.println("请输入要借阅图书的编号:");
+                        bid = scanner.nextInt();
+                        if (0 == bookService.getStatusByBid(bid)) {
+                            System.out.println("此书已借出!");
+                        } else {
+                            System.out.println("借阅中...");
+                            bookService.borrowAndGivebackBookByBid(bid, 0, sid);
+                            System.out.println("已借阅!");
+                        }
                         break;
                     case 9:
+                        System.out.println("请输入要归还图书的编号:");
+                        bid = scanner.nextInt();
+                        if (0 == bookService.getStatusByBid(bid)) {
+                            System.out.println("归还中...");
+                            bookService.borrowAndGivebackBookByBid(bid, 1, 0);
+                            System.out.println("已归还!");
+                        } else {
+                            System.out.println("此书已归还!或者查无此书!");
+                        }
+                        break;
+                    case 10:
                         System.exit(0);
                         break;
                     default:

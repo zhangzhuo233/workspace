@@ -2,8 +2,8 @@ package com.bd.booksystem.dao.Imp;
 
 import com.bd.booksystem.dao.BookDao;
 import com.bd.booksystem.model.Book;
+import com.bd.booksystem.model.Student;
 
-import javax.mail.internet.InternetAddress;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -57,17 +57,143 @@ public class BookDaoImp extends BaseDaoImp implements BookDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
         }
 
         return bookList;
     }
 
-    public static void main(String[] args) {
-        LinkedList<Book> list = new BookDaoImp().getBookByStatus(3);
-        for (Book book : list) {
-            System.out.println(book);
+    @Override
+    public Book getBookByBid(int bid) {
+        Book book = null;
+        conn = this.getConn();
+        String sql = "select * from book where bid=?";
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, bid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("bid");
+                String bname = rs.getString("bname");
+                String category = rs.getString("category");
+                book = new Book(id, bname, category);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
         }
-        Integer num = new Integer(1);
-        System.out.println(num.toString());
+
+        return book;
+    }
+
+    @Override
+    public void updateBook(String bname, String category, int bid) {
+        Book book = null;
+        conn = this.getConn();
+        String sql = "update book set bname=?,category=? where bid=?";
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, bname);
+            ps.setString(2, category);
+            ps.setInt(3, bid);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
+        }
+    }
+
+    @Override
+    public Student getStudentByBid(int bid) {
+        Student stu = null;
+        conn = this.getConn();
+        String sql = "select st.* from book b join  student st where b.bid=? and b.sid=st.sid and b.status=0";
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, bid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                int sid = rs.getInt("sid");
+                String sname = rs.getString("sname");
+                String sex = rs.getString("ssex");
+                int age = rs.getInt("sage");
+                String email = rs.getString("email");
+
+                stu = new Student(sid, sname, sex, age, email);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
+        }
+        return stu;
+    }
+
+    @Override
+    public void deleteBookByBid(int bid) {
+        conn = this.getConn();
+        String sql = "delete from book where bid=?";
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, bid);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
+        }
+    }
+
+    @Override
+    public void borrowAndGivebackBookByBid(int bid, int status, int sid) {
+        conn = this.getConn();
+        String sql = "update book set sid=?,status=? where bid=?";
+        try {
+            ps= conn.prepareStatement(sql);
+            ps.setInt(1, sid);
+            ps.setInt(2, status);
+            ps.setInt(3, bid);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
+        }
+    }
+
+    @Override
+    public int getStatusByBid(int bid) {
+        conn = this.getConn();
+        String sql = "select * from book where bid=?";
+        // 2代表没有查到
+        int status = 2;
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, bid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                status = rs.getInt("status");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            this.close(conn, ps, rs);
+        }
+        return status;
+    }
+
+    public static void main(String[] args) {
+        // LinkedList<Book> list = new BookDaoImp().getBookByStatus(3);
+        // for (Book book : list) {
+        //     System.out.println(book);
+        // }
+        // System.out.println(new BookDaoImp().getBookByBid(1));
+        // System.out.println(new BookDaoImp().getStudentByBid(1));
+        // new BookDaoImp().deleteBookByBid(7);
+        // new BookDaoImp().borrowAndGivebackBookByBid(8, 1, 6);
+        System.out.println(new BookDaoImp().getStatusByBid(1));
     }
 }
