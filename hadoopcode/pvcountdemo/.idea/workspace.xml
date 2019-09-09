@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="pvcountdemo:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="30eb4807-ba58-4eeb-b0fe-331d6f0b3c9f" name="Default Changelist" comment="" />
+    <list default="true" id="d7a73896-7a44-4aba-93e1-c6151b1a19fe" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +15,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -28,19 +40,21 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1QQSPOIaIlYiaTVua9OQAawv6vK" />
+  <component name="ProjectId" id="1QYDZHyrD1ILDlHQ2oBzqhCjpzE" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/out" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Abigdata\code\hdfstest01\resources" />
-      <recent name="E:\Abigdata\code\hdfstest01\src" />
+      <recent name="E:\Abigdata\code\pvcountdemo\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -56,46 +70,23 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="App.testUpload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hdfstest01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bd.hdfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bd.hdfs" />
-      <option name="MAIN_CLASS_NAME" value="com.bd.hdfs.App" />
-      <option name="METHOD_NAME" value="testUpload" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App.testUpload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hdfstest01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bd.hdfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bd.hdfs" />
-      <option name="MAIN_CLASS_NAME" value="com.bd.hdfs.App" />
-      <option name="METHOD_NAME" value="testUpload" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="PVcountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.PVcountDriver" />
+      <module name="pvcountdemo" />
       <option name="VM_PARAMETERS" value="-DHADOOP_USER_NAME=leo" />
-      <option name="PARAMETERS" value="" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.App.testUpload" />
-        <item itemvalue="JUnit.App.testUpload" />
+        <item itemvalue="Application.PVcountDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -104,14 +95,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="30eb4807-ba58-4eeb-b0fe-331d6f0b3c9f" name="Default Changelist" comment="" />
-      <created>1567701301423</created>
+      <changelist id="d7a73896-7a44-4aba-93e1-c6151b1a19fe" name="Default Changelist" comment="" />
+      <created>1567938689396</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1567701301423</updated>
-      <workItem from="1567701305782" duration="10274000" />
-      <workItem from="1567775950643" duration="21000" />
-      <workItem from="1567944689923" duration="8000" />
+      <updated>1567938689396</updated>
+      <workItem from="1567938693950" duration="11435000" />
     </task>
     <servers />
   </component>
