@@ -91,16 +91,19 @@ public class HBaseAPITest {
         /**
          * scan
          */
-        // instance.scanService();
-        List<Row> rows = new ArrayList<Row>();
-        Put putObj = new Put(Bytes.toBytes("1010"));
-        putObj.addColumn(Bytes.toBytes("contact"),
-                Bytes.toBytes("address"),
-                Bytes.toBytes("shanghai"));
-        rows.add(putObj);
-        Delete deleteObj = new Delete(Bytes.toBytes("1015"));
-        deleteObj.addFamily(Bytes.toBytes("contact"));
-        rows.add(deleteObj);
-        instance.commonBatch(rows);
+        instance.scanService();
+        /**
+         * batch row
+         */
+        // List<Row> rows = new ArrayList<Row>();
+        // Put putObj = new Put(Bytes.toBytes("1010"));
+        // putObj.addColumn(Bytes.toBytes("contact"),
+        //         Bytes.toBytes("address"),
+        //         Bytes.toBytes("shanghai"));
+        // rows.add(putObj);
+        // Delete deleteObj = new Delete(Bytes.toBytes("1015"));
+        // deleteObj.addFamily(Bytes.toBytes("contact"));
+        // rows.add(deleteObj);
+        // instance.commonBatch(rows);
     }
 }
