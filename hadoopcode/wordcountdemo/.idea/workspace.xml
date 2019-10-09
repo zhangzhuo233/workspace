@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d71ae5c5-a768-437a-906a-7dae1d163dd5" name="Default Changelist" comment="" />
+    <list default="true" id="06854848-5e8f-4d80-a54c-97820816ad6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../scalacode/scalaBaseTest/src/main/scala/com/bd/bigdata/ImplicitTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../scalacode/scalaBaseTest/src/main/scala/com/bd/bigdata/People.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../scalacode/scalaBaseTest/src/main/scala/com/bd/bigdata/TraitTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hbaseTest/hbaseTest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,19 +21,15 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\Abigdata\modules\maven_repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../modules/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="E:\Abigdata\modules\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="localRepository" value="/usr/local/apache-maven-3.6.1/.m2/repository" />
+        <option name="mavenHome" value="/usr/local/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="/usr/local/apache-maven-3.6.1/conf/settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -35,19 +41,14 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1QStxK9faWRKGQsD3hPOidA1egP" />
+  <component name="ProjectId" id="1Rv4YS5rOXePbiW1cpEd83D3jG0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Abigdata\code\wordcountdemo\resources" />
-    </key>
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,43 +62,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="WordcountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.WordcountDriver" />
-      <module name="wordcountdemo" />
-      <option name="VM_PARAMETERS" value="-DHADOOP_USER_NAME=leo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.WordcountDriver" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d71ae5c5-a768-437a-906a-7dae1d163dd5" name="Default Changelist" comment="" />
-      <created>1567776070917</created>
+      <changelist id="06854848-5e8f-4d80-a54c-97820816ad6d" name="Default Changelist" comment="" />
+      <created>1570534282050</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1567776070917</updated>
-      <workItem from="1567776072559" duration="7234000" />
-      <workItem from="1567944710497" duration="23000" />
+      <updated>1570534282050</updated>
+      <workItem from="1570534283322" duration="22000" />
+      <workItem from="1570534601074" duration="170000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

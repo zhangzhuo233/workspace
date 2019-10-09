@@ -1,0 +1,8 @@
+def
+setExecutorEnv(variables: Seq[(String, String)]): SparkConf
+Permalink
+Set multiple environment variables to be used when launching executors.
+def
+setExecutorEnv(variable: String, value: String): SparkConf
+Permalink
+Set an environment variable to be used when launching executors for this application.
