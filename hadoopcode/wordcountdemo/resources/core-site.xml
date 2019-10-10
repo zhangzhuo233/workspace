@@ -21,12 +21,12 @@
 	<!--这里的主机名就是namenode所在的节点的主机名-->
 	<property>
 		<name>fs.defaultFS</name>
-		<value>hdfs://hadoopserver01:8020</value>
+		<value>hdfs://hiveserver01:8020</value>
 	</property>
 	
 	<!--hadoop工作目录-->
 	<property>
 		<name>hadoop.tmp.dir</name>
-		<value>/opt/modules/hadoop-2.7.7/data/tmp</value>
+		<value>/opt/modules/cdh/hadoop-2.6.0-cdh5.14.4/data/tmp</value>
 	</property>
 </configuration>

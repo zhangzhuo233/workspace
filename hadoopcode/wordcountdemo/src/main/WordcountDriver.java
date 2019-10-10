@@ -14,14 +14,18 @@ public class WordcountDriver {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         // 设置输入输出路径
         args = new String[] {
-                "hdfs://hadoopserver01:8020/wordcount/input",
-                "hdfs://hadoopserver01:8020/wordcount/output9"
+                "hdfs://hiveserver01:8020/wordcount/input",
+                "hdfs://hiveserver01:8020/wordcount/output"
         };
         // 创建默认配置文件类的对象
         Configuration conf = new Configuration();
         // 获取一个job实例
         Job job = Job.getInstance(conf);
         job.setJarByClass(WordcountDriver.class);
+        // 要求1：开启combiner优化
+        job.setCombinerClass(WordcountReducer.class);
+        // 要求2：设置使用3个reduce
+        job.setNumReduceTasks(3);
         // 设置输入输出路径
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
