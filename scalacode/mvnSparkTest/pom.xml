@@ -10,6 +10,7 @@
     </properties>
 
     <repositories>
+        <!-- cdh版hadoop依赖 -->
         <repository>
             <id>cdh</id>
             <name>Cloudera Rel Repository</name>
