@@ -2,6 +2,8 @@ package com.bd.sparkproject.util;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.bd.sparkproject.conf.ConfigurationManager;
+import com.bd.sparkproject.constant.Constants;
 
 /**
  * 参数工具类
@@ -13,16 +15,24 @@ public class ParamUtils {
 	/**
 	 * 从命令行参数中提取任务id
 	 * @param args 命令行参数
+	 * @param taskType 本地测试任务指定的taskId，此处为2
 	 * @return 任务id
 	 */
-	public static Long getTaskIdFromArgs(String[] args) {
-		try {
-			if(args != null && args.length > 0) {
-				return Long.valueOf(args[0]);
+	public static Long getTaskIdFromArgs(String[] args, String taskType) {
+		boolean local = ConfigurationManager.getBoolean(Constants.SPARK_LOCAL);
+
+		if(local) {
+			return ConfigurationManager.getLong(taskType);
+		} else {
+			try {
+				if(args != null && args.length > 0) {
+					return Long.valueOf(args[0]);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}  
+		}
+
 		return null;
 	}
 	
