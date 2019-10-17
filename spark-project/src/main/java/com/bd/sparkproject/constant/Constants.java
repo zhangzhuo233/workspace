@@ -10,7 +10,8 @@ public interface Constants {
     /**
      * 项目配置相关的常量
      */
-    String DEBUG= "debug";
+    String PROPERTIES_FILE_NAME = "my.properties";
+    String DEBUG = "debug";
     String JDBC_DRIVER = "jdbc.driver";
     String JDBC_DATASOURCE_SIZE = "jdbc.datasource.size";
     String JDBC_URL = "jdbc.url";
@@ -45,6 +46,8 @@ public interface Constants {
     String FIELD_ORDER_COUNT = "orderCount";
     String FIELD_PAY_COUNT = "payCount";
     String FIELD_CATEGORY_ID = "categoryid";
+    // 抽取的session总数
+    String EXTRACT_SESSION_COUNT = "extractSessionCount";
 
     String SESSION_COUNT = "session_count";
 

@@ -1,8 +1,12 @@
 package com.bd.sparkproject.dao.factory;
 
 import com.bd.sparkproject.dao.ISessionAggrStatDAO;
+import com.bd.sparkproject.dao.ISessionDetail;
+import com.bd.sparkproject.dao.ISessionRandomExtractDAO;
 import com.bd.sparkproject.dao.ITaskDAO;
 import com.bd.sparkproject.dao.impl.SessionAggrStatDAOImp;
+import com.bd.sparkproject.dao.impl.SessionDetailDAOImp;
+import com.bd.sparkproject.dao.impl.SessionRandomExtarctDAOImp;
 import com.bd.sparkproject.dao.impl.TaskDAOImpl;
 
 /**
@@ -17,5 +21,11 @@ public class DAOFactory {
     }
     public static ISessionAggrStatDAO getSessionAggrStatDAO() {
         return new SessionAggrStatDAOImp();
+    }
+    public static ISessionRandomExtractDAO getSessionRandomExtractDAO() {
+        return new SessionRandomExtarctDAOImp();
+    }
+    public static ISessionDetail getSessionDetailDAO() {
+        return new SessionDetailDAOImp();
     }
 }
