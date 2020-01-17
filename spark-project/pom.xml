@@ -80,7 +80,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.25</version>
+            <version>1.2.62</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -92,8 +92,6 @@
 
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
-        <testSourceDirectory>src/main/test</testSourceDirectory>
-
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
